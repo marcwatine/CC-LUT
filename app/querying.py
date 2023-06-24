@@ -24,18 +24,19 @@ def descargar_opccc(id_capa, save_dir):
         )
 
     # ---- Download .rar file ----
+    geojson_filename = filename.split('_id')[0] + '.geojson'
     if filename not in os.listdir(save_dir):
         logging.warning(f'Downloading {filename}')
         urllib.request.urlretrieve(url, save_dir+filename)
 
-    # ---- Unzip file ----
-    Archive(save_dir+filename).extractall(save_dir)
+        # ---- Unzip file ----
+        Archive(save_dir+filename).extractall(save_dir)
 
-    # ---- Convert shapefile to geojson (because we don't like shapefiles) ----
-    shp_filename = filename.split('_id')[0] + '.shp'
-    geojson_filename = filename.split('_id')[0] + '.geojson'
-    gdf = gpd.read_file(save_dir+shp_filename)
-    gdf.to_file(save_dir+geojson_filename, driver='GeoJSON')
+        # ---- Convert shapefile to geojson (because we don't like shapefiles) ----
+        shp_filename = filename.split('_id')[0] + '.shp'
+        
+        gdf = gpd.read_file(save_dir+shp_filename)
+        gdf.to_file(save_dir+geojson_filename, driver='GeoJSON')
 
     # ---- Return the filepath to keep track of the now useful file ---- 
     return save_dir+geojson_filename
