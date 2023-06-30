@@ -1,0 +1,33 @@
+{
+    "os": "macOS-12.1-arm64-arm-64bit",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-06-29T19:05:44.240693",
+    "startedAt": "2023-06-29T19:05:43.708277",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "CC-LUT/wandb_tests.ipynb",
+    "root": "/Users/marcwatine/Desktop/GOOD/CC-LUT",
+    "git": {
+        "remote": "git@github.com:marcwatine/CC-LUT.git",
+        "commit": "4d5a9c0d7d9b4706247e4f4a726f02542807ce07"
+    },
+    "email": "watine98@gmail.com",
+    "host": "dhcp-10-250-161-60.harvard.edu",
+    "username": "marcwatine",
+    "executable": "/opt/homebrew/opt/python@3.11/bin/python3.11",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "total": 926.3517189025879,
+        "used": 23.601837158203125
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 32.0
+    }
+}
